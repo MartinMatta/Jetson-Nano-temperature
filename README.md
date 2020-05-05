@@ -4,8 +4,8 @@ Bash script for measuring CPU and GPU temperature.
 
 ### Download
 ```sh
-$ git ...
-$ cd 'Jetson Nano temperature'
+$ git clone https://github.com/MartinMatta/Jetson-Nano-temperature
+$ cd Jetson-Nano-temperature
 $ chmod 755 temp.sh
 ```
 ### Run
