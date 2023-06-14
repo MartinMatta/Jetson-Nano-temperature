@@ -1,10 +1,7 @@
 #!/bin/bash
+echo "$(cat /sys/devices/virtual/thermal/thermal_zone0/type): $(echo "scale=2; $(cat /sys/devices/virtual/thermal/thermal_zone0/temp)/1000" |bc)°C"
+echo "$(cat /sys/devices/virtual/thermal/thermal_zone1/type): $(echo "scale=2; $(cat /sys/devices/virtual/thermal/thermal_zone1/temp)/1000" |bc)°C"
+echo "$(cat /sys/devices/virtual/thermal/thermal_zone2/type): $(echo "scale=2; $(cat /sys/devices/virtual/thermal/thermal_zone2/temp)/1000" |bc)°C"
+echo "$(cat /sys/devices/virtual/thermal/thermal_zone3/type): $(echo "scale=2; $(cat /sys/devices/virtual/thermal/thermal_zone3/temp)/1000" |bc)°C"
+echo "$(cat /sys/devices/virtual/thermal/thermal_zone5/type): $(echo "scale=2; $(cat /sys/devices/virtual/thermal/thermal_zone5/temp)/1000" |bc)°C"
 
-CPU_temp=$(cat /sys/class/thermal/thermal_zone1/temp)
-GPU_temp=$(cat /sys/class/thermal/thermal_zone2/temp)
-
-cpu=$((CPU_temp/1000))
-gpu=$((GPU_temp/1000))
-
-echo "CPU $cpu°C"
-echo "GPU $gpu°C"
